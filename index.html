@@ -51,14 +51,14 @@
                 <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
                 <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
                 <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
-                <li><a href="#testimonials" class="hover:text-primary transition-colors duration-300">Resources</a></li>
+                <li><a href="#faq" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
             </ul>
             
             <div class="flex items-center gap-4">
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="p-2 bg-white/20 hover:bg-white/30 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer">
                     <svg id="theme-icon-light" class="w-5 h-5 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
                     </svg>
                     <svg id="theme-icon-dark" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -78,7 +78,7 @@
                 <li><a href="#home" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Home</a></li>
                 <li><a href="#features" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Features</a></li>
                 <li><a href="#pricing" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Pricing</a></li>
-                <li><a href="#testimonials" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Resources</a></li>
+                <li><a href="#faq" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">FAQ</a></li>
                 <li class="pt-4 border-t border-gray-100 dark:border-slate-800"><a href="#contact-form" class="mobile-link block text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold">Get Started</a></li>
             </ul>
         </div>
@@ -254,41 +254,52 @@
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-sm italic leading-relaxed dark:text-slate-300">Tracking labor hours and resource allocation has never been easier. A true game-changer!</p>
                 </div>
-                <!-- Card 4 -->
-                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                    <div class="flex items-center gap-4 mb-4">
-                        <img src="avatars/avatar-4.jpg" alt="David" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">David Smith</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Site Foreman</span>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 4: FAQ Accordion Section (Newly Added) -->
+    <section id="faq" class="max-w-4xl mx-auto py-24 px-4">
+        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-4">Frequently Asked Questions</h2>
+        <p class="text-center text-body dark:text-slate-400 mb-12">Everything you need to know about BuildPro.</p>
+        
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
+                    <span>How does the real-time hazard alert work?</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
+                </button>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
+                        Workers can instantly report hazards through our mobile app. The system immediately notifies site managers and all active personnel in the vicinity to ensure safety protocols are followed.
                     </div>
-                    <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed dark:text-slate-300">A tool that truly prioritizes worker safety. The instant hazard reporting is brilliant.</p>
                 </div>
-                <!-- Card 5 -->
-                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                    <div class="flex items-center gap-4 mb-4">
-                        <img src="avatars/avatar-5.jpg" alt="Michael" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Michael Turner</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Project Manager</span>
-                        </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
+                    <span>Can I use BuildPro on my mobile device?</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
+                </button>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
+                        Absolutely! BuildPro is fully optimized for mobile devices, making it easy for laborers and foremen to update tasks and report issues directly from the field.
                     </div>
-                    <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed dark:text-slate-300">BuildPro streamlined our entire workflow. The efficiency in managing on-site teams is remarkable.</p>
                 </div>
-                <!-- Card 6 -->
-                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                    <div class="flex items-center gap-4 mb-4">
-                        <img src="avatars/avatar-6.jpg" alt="Sarah" class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Sarah Jenkins</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Lead Engineer</span>
-                        </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
+                    <span>Is there a limit to how many workers I can add?</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
+                </button>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
+                        It depends on your pricing plan. The Starter plan allows up to 10 workers, Pro allows 50, and our Enterprise plan offers unlimited worker capacity.
                     </div>
-                    <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed dark:text-slate-300">Real-time safety tracking gives us incredible peace of mind. Every builder is protected.</p>
                 </div>
             </div>
         </div>
@@ -367,7 +378,7 @@
         </div>
     </footer>
     
-    <!-- JavaScript for Mobile Menu, Theme Toggle, Pricing Toggle & Contact Form -->
+    <!-- JavaScript Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Theme Toggle
@@ -426,7 +437,6 @@
                     }
                 });
 
-                // Auto close menu when a mobile link is clicked
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         mobileMenuDropdown.style.maxHeight = '0px';
@@ -478,7 +488,27 @@
                 });
             }
 
-            // 4. Contact Form Validation (5 Conditions)
+            // 4. Phase 4: FAQ Accordion Logic (Strictly following the instructions)
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Find the next element sibling (the answer div)
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('.faq-icon');
+                    
+                    // Toggle max-height to show/hide with transition
+                    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                        answer.style.maxHeight = '0px';
+                        icon.textContent = '+';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.textContent = '−';
+                    }
+                });
+            });
+
+            // 5. Contact Form Validation
             const contactForm = document.getElementById('contact-form-element');
             const nameInput = document.getElementById('contact-name');
             const emailInput = document.getElementById('contact-email');
