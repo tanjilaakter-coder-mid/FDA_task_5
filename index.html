@@ -12,6 +12,7 @@
     <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -20,6 +21,8 @@
                         heading: '#475569',
                         body: '#64748B',
                         light: '#94A3B8',
+                        'dark-bg': '#0B1120',
+                        'dark-card': '#1E293B'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -33,31 +36,57 @@
         }
     </script>
 </head>
-<body class="font-sans text-body bg-slate-50">
+<body class="font-sans text-body bg-slate-50 dark:bg-dark-bg dark:text-slate-300 transition-colors duration-300 scroll-smooth">
 
     <!-- Hero Section -->
-    <header class="relative w-full min-h-[600px] h-screen bg-[url('main-images/hero-bg.jpg')] bg-cover bg-center text-white">
-        <!-- Overlay -->
+    <header id="home" class="relative w-full min-h-[600px] h-screen bg-[url('main-images/hero-bg.jpg')] bg-cover bg-center text-white">
         <div class="absolute inset-0 bg-black/60 z-0"></div>
         
         <!-- Glassmorphism Navbar -->
-        <nav class="absolute top-0 left-0 w-full z-10 bg-white/10 backdrop-blur-md border-b border-white/20 py-5 px-6 md:px-[5%] flex justify-between items-center">
+        <nav class="absolute top-0 left-0 w-full z-30 bg-white/10 backdrop-blur-md border-b border-white/20 py-5 px-6 md:px-[5%] flex justify-between items-center">
             <div class="text-2xl font-bold">BuildPro</div>
+            
+            <!-- Desktop Menu -->
             <ul class="hidden md:flex gap-8">
-                <li><a href="#" class="hover:text-primary transition-colors duration-300">Home</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors duration-300">Features</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors duration-300">Resources</a></li>
+                <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
+                <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
+                <li><a href="#testimonials" class="hover:text-primary transition-colors duration-300">Resources</a></li>
             </ul>
-            <a href="#" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">Get Started</a>
-            <div class="md:hidden text-3xl cursor-pointer">☰</div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 bg-white/20 hover:bg-white/30 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer">
+                    <svg id="theme-icon-light" class="w-5 h-5 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="theme-icon-dark" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+
+                <a href="#contact-form" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">Get Started</a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-3xl focus:outline-none cursor-pointer">☰</button>
+            </div>
         </nav>
 
-        <!-- Hero Content -->
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu-dropdown" class="hidden max-h-0 overflow-hidden transition-all duration-300 absolute top-[80px] left-0 w-full bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700 shadow-2xl z-20">
+            <ul class="flex flex-col py-6 px-6 gap-4 text-left">
+                <li><a href="#home" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Home</a></li>
+                <li><a href="#features" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Features</a></li>
+                <li><a href="#pricing" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Pricing</a></li>
+                <li><a href="#testimonials" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Resources</a></li>
+                <li class="pt-4 border-t border-gray-100 dark:border-slate-800"><a href="#contact-form" class="mobile-link block text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold">Get Started</a></li>
+            </ul>
+        </div>
+
         <div class="relative z-10 max-w-2xl mx-auto pt-[200px] text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Empowering the <br> <span class="text-primary">Modern Builder</span></h1>
             <p class="text-lg md:text-xl opacity-90 mb-8 leading-relaxed">Advanced site management and safety tools designed specifically for the hardworking teams on the ground.</p>
-            <a href="#" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">Learn more</a>
+            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">Learn more</a>
         </div>
     </header>
 
@@ -65,28 +94,28 @@
     <section class="max-w-6xl mx-auto py-20 px-4">
         <h4 class="text-center text-light text-sm tracking-widest uppercase mb-10">Trusted by top construction firms</h4>
         <div class="flex justify-center md:justify-between items-center flex-wrap gap-8">
-            <img src="company-logos/trusted-1.png" alt="Company 1" class="h-12 md:h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.2)] transition-all duration-500">
-            <img src="company-logos/trusted-2.png" alt="Company 2" class="h-12 md:h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.2)] transition-all duration-500">
-            <img src="company-logos/trusted-3.png" alt="Company 3" class="h-12 md:h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.2)] transition-all duration-500">
-            <img src="company-logos/trusted-4.png" alt="Company 4" class="h-12 md:h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.2)] transition-all duration-500">
+            <img src="company-logos/trusted-1.png" alt="Company 1" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
+            <img src="company-logos/trusted-2.png" alt="Company 2" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
+            <img src="company-logos/trusted-3.png" alt="Company 3" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
+            <img src="company-logos/trusted-4.png" alt="Company 4" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
         </div>
     </section>
 
     <!-- Core Features Section -->
-    <section class="max-w-6xl mx-auto py-20 px-4">
-        <h2 class="text-3xl md:text-4xl text-heading text-center font-bold mb-16 leading-tight">Core Features for <br><span class="text-primary">Modern</span> Construction</h2>
+    <section id="features" class="max-w-6xl mx-auto py-20 px-4">
+        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">Core Features for <br><span class="text-primary">Modern</span> Construction</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-primary text-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h4 class="text-xl font-bold mb-4">👷 Real-Time Safety</h4>
-                <p class="text-sm opacity-90 leading-relaxed">Monitor worker safety standards and prevent site hazards instantly.</p>
+                <p class="text-sm opacity-90 dark:text-slate-300">Monitor worker safety standards and prevent site hazards instantly.</p>
             </div>
-            <div class="bg-primary text-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h4 class="text-xl font-bold mb-4">📋 Task Management</h4>
-                <p class="text-sm opacity-90 leading-relaxed">Assign daily tasks to laborers and track project progress effortlessly.</p>
+                <p class="text-sm opacity-90 dark:text-slate-300">Assign daily tasks to laborers and track project progress effortlessly.</p>
             </div>
-            <div class="bg-primary text-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h4 class="text-xl font-bold mb-4">⚙️ Resource Optimization</h4>
-                <p class="text-sm opacity-90 leading-relaxed">Efficiently manage building materials and labor hours in one dashboard.</p>
+                <p class="text-sm opacity-90 dark:text-slate-300">Efficiently manage building materials and labor hours in one dashboard.</p>
             </div>
         </div>
     </section>
@@ -94,9 +123,9 @@
     <!-- Dashboard Showcase Section -->
     <section class="max-w-6xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl text-heading font-bold mb-6 leading-tight">Built for the site.<br><span class="text-primary">Designed</span> for the workers.</h2>
-            <p class="mb-8 leading-relaxed">We believe in empowering the hardworking hands that build our world. Our platform simplifies daily workflows so your crew can focus on what they do best—building safely and efficiently.</p>
-            <ul class="space-y-4 text-left inline-block md:block">
+            <h2 class="text-3xl md:text-4xl text-heading dark:text-white font-bold mb-6 leading-tight">Built for the site.<br><span class="text-primary">Designed</span> for the workers.</h2>
+            <p class="mb-8 leading-relaxed dark:text-slate-300">We believe in empowering the hardworking hands that build our world. Our platform simplifies daily workflows so your crew can focus on what they do best—building safely and efficiently.</p>
+            <ul class="space-y-4 text-left inline-block md:block dark:text-slate-300">
                 <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Intuitive dashboard for site managers</li>
                 <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Real-time hazard and safety alerts</li>
                 <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Easy progress tracking from the field</li>
@@ -104,166 +133,226 @@
             </ul>
         </div>
         <div class="flex-1">
-            <img src="main-images/dashboard-mockup.png" alt="SaaS Dashboard UI" class="w-full rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+            <img src="main-images/dashboard-mockup.png" alt="SaaS Dashboard UI" class="w-full rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="bg-slate-100 py-24">
+    <section class="bg-slate-100 dark:bg-transparent py-24 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-heading text-center font-bold mb-16 leading-tight">How It Works<br><span class="text-lg font-normal text-body mt-2 block">How BuildPro Simplifies Your Site</span></h2>
+            <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">How It Works<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">How BuildPro Simplifies Your Site</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
-                    <img src="work-icons/icon-team.png" alt="Connect Team" class="h-10 mb-6 grayscale opacity-60">
-                    <h4 class="text-xl text-heading font-bold mb-4">Connect Your Team</h4>
-                    <p class="text-sm leading-relaxed">Bring managers and site workers together instantly.</p>
+                <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+                    <img src="work-icons/icon-team.png" alt="Connect Team" class="h-10 mb-6 grayscale opacity-60 dark:invert">
+                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Connect Your Team</h4>
+                    <p class="text-sm leading-relaxed dark:text-slate-300">Bring managers and site workers together instantly.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
-                    <img src="work-icons/icon-task.png" alt="Assign Tasks" class="h-10 mb-6 grayscale opacity-60">
-                    <h4 class="text-xl text-heading font-bold mb-4">Assign Tasks & Track</h4>
-                    <p class="text-sm leading-relaxed">Easily assign daily jobs and track progress.</p>
+                <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+                    <img src="work-icons/icon-task.png" alt="Assign Tasks" class="h-10 mb-6 grayscale opacity-60 dark:invert">
+                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Assign Tasks & Track</h4>
+                    <p class="text-sm leading-relaxed dark:text-slate-300">Easily assign daily jobs and track progress.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
-                    <img src="work-icons/icon-safety.png" alt="Safety" class="h-10 mb-6 grayscale opacity-60">
-                    <h4 class="text-xl text-heading font-bold mb-4">Prevent Hazards</h4>
-                    <p class="text-sm leading-relaxed">Prevent site hazards and finish projects safely.</p>
+                <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+                    <img src="work-icons/icon-safety.png" alt="Safety" class="h-10 mb-6 grayscale opacity-60 dark:invert">
+                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Prevent Hazards</h4>
+                    <p class="text-sm leading-relaxed dark:text-slate-300">Prevent site hazards and finish projects safely.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="max-w-6xl mx-auto py-24 px-4">
-        <h2 class="text-3xl md:text-4xl text-heading text-center font-bold mb-16 leading-tight">Pricing<br><span class="text-lg font-normal text-body mt-2 block">Choose the Right <span class="text-primary">Plan</span> for Your Site</span></h2>
+    <section id="pricing" class="max-w-6xl mx-auto py-24 px-4">
+        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-6 leading-tight">Pricing<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Choose the Right <span class="text-primary">Plan</span> for Your Site</span></h2>
+        
+        <!-- Pricing Toggle Switch -->
+        <div class="flex justify-center items-center gap-4 mb-16">
+            <span class="text-sm font-semibold text-heading dark:text-slate-300">Monthly</span>
+            <button id="pricing-toggle" class="relative w-14 h-8 bg-slate-300 dark:bg-slate-700 rounded-full p-1 transition-colors duration-300 focus:outline-none cursor-pointer">
+                <div id="pricing-toggle-circle" class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
+            </button>
+            <span class="text-sm font-semibold text-heading dark:text-slate-300">Yearly <span class="text-xs text-primary font-bold">(Save 20%)</span></span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 text-center">
-                <h3 class="text-2xl text-heading font-bold mb-4">Starter</h3>
-                <div class="text-xl font-bold mb-8"><span class="text-primary">$29</span> / month</div>
-                <ul class="text-left space-y-4 mb-10 text-sm">
+            <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
+                <h3 class="text-2xl text-heading dark:text-white font-bold mb-4">Starter</h3>
+                <div class="text-xl font-bold mb-8 dark:text-white"><span id="price-1" class="text-primary dark:text-slate-300">$29</span> <span class="text-sm font-normal text-body dark:text-slate-400">/ month</span></div>
+                <ul class="text-left space-y-4 mb-10 text-sm dark:text-slate-300">
                     <li>Up to 10 active workers</li>
                     <li>Basic task management</li>
                     <li>Standard safety checklists</li>
                     <li>Email support</li>
                 </ul>
-                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
             </div>
-            <div class="bg-primary text-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 text-center">
-                <h3 class="text-2xl font-bold mb-4">Pro (Most Popular)</h3>
-                <div class="text-xl font-bold mb-8">$79 / month</div>
-                <ul class="text-left space-y-4 mb-10 text-sm opacity-90">
+            
+            <div class="bg-primary text-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
+                <h3 class="text-2xl font-bold mb-4 dark:text-white">Pro (Most Popular)</h3>
+                <div class="text-xl font-bold mb-8 text-white dark:text-slate-200"><span id="price-2">$79</span> <span class="text-sm font-normal opacity-80">/ month</span></div>
+                <ul class="text-left space-y-4 mb-10 text-sm opacity-90 dark:text-slate-300">
                     <li>Up to 50 active workers</li>
                     <li>Real-time hazard alerts</li>
                     <li>Advanced progress tracking</li>
                     <li>24/7 priority support</li>
                 </ul>
-                <a href="#" class="inline-block px-6 py-3 bg-white text-primary hover:bg-slate-100 rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 bg-white text-primary dark:bg-slate-700 dark:text-white hover:bg-slate-100 rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
             </div>
-            <div class="bg-white p-10 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 text-center">
-                <h3 class="text-2xl text-heading font-bold mb-4">Enterprise</h3>
-                <div class="text-xl font-bold mb-8">Custom Pricing</div>
-                <ul class="text-left space-y-4 mb-10 text-sm">
+            
+            <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
+                <h3 class="text-2xl text-heading dark:text-white font-bold mb-4">Enterprise</h3>
+                <div class="text-xl font-bold mb-8 dark:text-white">Custom Pricing</div>
+                <ul class="text-left space-y-4 mb-10 text-sm dark:text-slate-300">
                     <li>Unlimited workers & projects</li>
                     <li>Custom safety reports</li>
                     <li>Dedicated account manager</li>
                     <li>API & software integration</li>
                 </ul>
-                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-semibold transition-colors duration-300">Get Started &rarr;</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-slate-100 py-24">
+    <section id="testimonials" class="bg-slate-100 dark:bg-transparent py-24 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-heading text-center font-bold mb-16 leading-tight">What Our <span class="text-primary">Partners</span> Say<br><span class="text-lg font-normal text-body mt-2 block">Real feedback from the hardworking teams on the ground.</span></h2>
+            <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">What Our <span class="text-primary">Partners</span> Say<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Real feedback from the hardworking teams on the ground.</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-1.jpg" alt="Emily" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">Emily Rodriguez</h4>
-                            <span class="text-light text-xs">Safety Coordinator</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">Emily Rodriguez</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Safety Coordinator</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">Finally, a tool that prioritizes worker safety as much as we do. The instant hazard reporting feature is absolutely brilliant.</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">Finally, a tool that prioritizes worker safety as much as we do. The instant hazard reporting feature is absolutely brilliant.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-2.jpg" alt="James" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">James Carter</h4>
-                            <span class="text-light text-xs">Chief Contractor</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">James Carter</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Chief Contractor</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">This platform transformed how we manage daily safety and coordinate field teams. It's a lifesaver!</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">This platform transformed how we manage daily safety and coordinate field teams. It's a lifesaver!</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-3.jpg" alt="Robert" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">Robert Chen</h4>
-                            <span class="text-light text-xs">Operations Director</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">Robert Chen</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Operations Director</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">Tracking labor hours and resource allocation has never been easier. A true game-changer!</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">Tracking labor hours and resource allocation has never been easier. A true game-changer!</p>
                 </div>
                 <!-- Card 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-4.jpg" alt="David" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">David Smith</h4>
-                            <span class="text-light text-xs">Site Foreman</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">David Smith</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Site Foreman</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">A tool that truly prioritizes worker safety. The instant hazard reporting is brilliant.</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">A tool that truly prioritizes worker safety. The instant hazard reporting is brilliant.</p>
                 </div>
                 <!-- Card 5 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-5.jpg" alt="Michael" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">Michael Turner</h4>
-                            <span class="text-light text-xs">Project Manager</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">Michael Turner</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Project Manager</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">BuildPro streamlined our entire workflow. The efficiency in managing on-site teams is remarkable.</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">BuildPro streamlined our entire workflow. The efficiency in managing on-site teams is remarkable.</p>
                 </div>
                 <!-- Card 6 -->
-                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500">
+                <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-6.jpg" alt="Sarah" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading font-semibold text-sm">Sarah Jenkins</h4>
-                            <span class="text-light text-xs">Lead Engineer</span>
+                            <h4 class="text-heading dark:text-white font-semibold text-sm">Sarah Jenkins</h4>
+                            <span class="text-light text-xs dark:text-slate-400">Lead Engineer</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-sm italic leading-relaxed">Real-time safety tracking gives us incredible peace of mind. Every builder is protected.</p>
+                    <p class="text-sm italic leading-relaxed dark:text-slate-300">Real-time safety tracking gives us incredible peace of mind. Every builder is protected.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Professional Contact Us Section with Message Box & 5 Conditions Validation -->
+    <section id="contact-form" class="py-20 bg-slate-100 dark:bg-slate-800/40 transition-colors duration-300">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-heading dark:text-white mb-2">Get in Touch with Us</h2>
+                <p class="text-body dark:text-slate-400 text-sm">Have questions about our site management tools? Send us a message below.</p>
+            </div>
+            
+            <form id="contact-form-element" class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-card space-y-6">
+                <!-- General Error/Success Feedback Box -->
+                <div id="form-feedback" class="p-4 rounded-lg text-sm hidden font-medium text-center"></div>
+
+                <!-- 1. Name Field -->
+                <div>
+                    <label class="block text-sm font-semibold text-heading dark:text-slate-300 mb-2">Full Name</label>
+                    <input type="text" id="contact-name" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors">
+                </div>
+
+                <!-- 2. Email Field -->
+                <div>
+                    <label class="block text-sm font-semibold text-heading dark:text-slate-300 mb-2">Email Address</label>
+                    <input type="text" id="contact-email" placeholder="Enter your email address" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors">
+                </div>
+
+                <!-- 3. Subject Field -->
+                <div>
+                    <label class="block text-sm font-semibold text-heading dark:text-slate-300 mb-2">Subject</label>
+                    <input type="text" id="contact-subject" placeholder="What is this about?" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors">
+                </div>
+
+                <!-- 4. Message Box (Textarea) -->
+                <div>
+                    <label class="block text-sm font-semibold text-heading dark:text-slate-300 mb-2">Message</label>
+                    <textarea id="contact-message" rows="4" placeholder="Write your message here (at least 10 characters)..." class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors"></textarea>
+                </div>
+
+                <!-- 5. Checkbox Condition -->
+                <div class="flex items-center gap-3">
+                    <input type="checkbox" id="contact-terms" class="w-4 h-4 text-primary rounded border-slate-300 focus:ring-primary cursor-pointer">
+                    <label for="contact-terms" class="text-sm text-body dark:text-slate-400 cursor-pointer">I agree to the terms and privacy policy.</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white py-3 rounded-lg font-semibold transition-colors cursor-pointer">Send Message</button>
+            </form>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="relative py-24 text-center text-white bg-[url('main-images/cta-bg.jpg')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
         <div class="relative z-10 max-w-2xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Build Smarter & Safer?</h2>
-            <a href="#" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">Start Your Free Trial</a>
+            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">Start Your Free Trial</a>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-slate-800 text-white py-12 px-4">
+    <footer class="bg-slate-800 dark:bg-slate-900 text-white py-12 px-4 transition-colors duration-300 border-t border-slate-700/50">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <h3 class="text-2xl font-bold mb-2">BuildPro</h3>
@@ -277,6 +366,182 @@
             </div>
         </div>
     </footer>
+    
+    <!-- JavaScript for Mobile Menu, Theme Toggle, Pricing Toggle & Contact Form -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Theme Toggle
+            const themeBtn = document.getElementById('theme-toggle');
+            const darkIcon = document.getElementById('theme-icon-dark');
+            const lightIcon = document.getElementById('theme-icon-light');
 
+            const toggleIcons = () => {
+                if (darkIcon && lightIcon) {
+                    darkIcon.classList.toggle('hidden');
+                    lightIcon.classList.toggle('hidden');
+                }
+            };
+
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                if (lightIcon && darkIcon) {
+                    lightIcon.classList.remove('hidden');
+                    darkIcon.classList.add('hidden');
+                }
+            }
+
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    toggleIcons();
+                    
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.theme = 'dark';
+                    } else {
+                        localStorage.theme = 'light';
+                    }
+                });
+            }
+
+            // 2. Mobile Menu Toggle & Smooth Auto-Close
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenuDropdown) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isHidden = mobileMenuDropdown.classList.contains('hidden');
+                    
+                    if (isHidden) {
+                        mobileMenuDropdown.classList.remove('hidden');
+                        mobileMenuDropdown.style.maxHeight = mobileMenuDropdown.scrollHeight + 'px';
+                        mobileMenuBtn.innerHTML = '✕';
+                    } else {
+                        mobileMenuDropdown.style.maxHeight = '0px';
+                        setTimeout(() => {
+                            mobileMenuDropdown.classList.add('hidden');
+                        }, 300);
+                        mobileMenuBtn.innerHTML = '☰';
+                    }
+                });
+
+                // Auto close menu when a mobile link is clicked
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenuDropdown.style.maxHeight = '0px';
+                        setTimeout(() => {
+                            mobileMenuDropdown.classList.add('hidden');
+                        }, 300);
+                        mobileMenuBtn.innerHTML = '☰';
+                    });
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuDropdown.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        mobileMenuDropdown.style.maxHeight = '0px';
+                        setTimeout(() => {
+                            mobileMenuDropdown.classList.add('hidden');
+                        }, 300);
+                        mobileMenuBtn.innerHTML = '☰';
+                    }
+                });
+            }
+
+            // 3. Pricing Toggle
+            const pricingToggle = document.getElementById('pricing-toggle');
+            const toggleCircle = document.getElementById('pricing-toggle-circle');
+            const price1 = document.getElementById('price-1');
+            const price2 = document.getElementById('price-2');
+
+            let isYearly = false;
+
+            if (pricingToggle && toggleCircle && price1 && price2) {
+                pricingToggle.addEventListener('click', () => {
+                    isYearly = !isYearly;
+                    
+                    if (isYearly) {
+                        toggleCircle.style.transform = 'translateX(24px)';
+                        pricingToggle.classList.remove('bg-slate-300', 'dark:bg-slate-700');
+                        pricingToggle.classList.add('bg-primary');
+                        
+                        price1.innerHTML = '$278';
+                        price2.innerHTML = '$758';
+                    } else {
+                        toggleCircle.style.transform = 'translateX(0px)';
+                        pricingToggle.classList.remove('bg-primary');
+                        pricingToggle.classList.add('bg-slate-300', 'dark:bg-slate-700');
+                        
+                        price1.innerHTML = '$29';
+                        price2.innerHTML = '$79';
+                    }
+                });
+            }
+
+            // 4. Contact Form Validation (5 Conditions)
+            const contactForm = document.getElementById('contact-form-element');
+            const nameInput = document.getElementById('contact-name');
+            const emailInput = document.getElementById('contact-email');
+            const subjectInput = document.getElementById('contact-subject');
+            const messageInput = document.getElementById('contact-message');
+            const termsCheckbox = document.getElementById('contact-terms');
+            const feedbackBox = document.getElementById('form-feedback');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const nameVal = nameInput.value.trim();
+                    const emailVal = emailInput.value.trim();
+                    const subjectVal = subjectInput.value.trim();
+                    const messageVal = messageInput.value.trim();
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                    if (nameVal.length < 3) {
+                        showError('Please enter your full name (at least 3 characters).');
+                        return;
+                    }
+
+                    if (!emailPattern.test(emailVal)) {
+                        showError('Please enter a valid email address.');
+                        return;
+                    }
+
+                    if (subjectVal === '') {
+                        showError('Subject field cannot be empty.');
+                        return;
+                    }
+
+                    if (messageVal.length < 10) {
+                        showError('Message must be at least 10 characters long.');
+                        return;
+                    }
+
+                    if (!termsCheckbox.checked) {
+                        showError('You must agree to the terms and privacy policy.');
+                        return;
+                    }
+
+                    feedbackBox.textContent = '🎉 Thank you! Your message has been sent successfully.';
+                    feedbackBox.className = 'p-4 rounded-lg text-sm font-medium text-center bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300';
+                    feedbackBox.classList.remove('hidden');
+
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        feedbackBox.classList.add('hidden');
+                    }, 5000);
+                });
+            }
+
+            function showError(message) {
+                if (feedbackBox) {
+                    feedbackBox.textContent = message;
+                    feedbackBox.className = 'p-4 rounded-lg text-sm font-medium text-center bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300';
+                    feedbackBox.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
