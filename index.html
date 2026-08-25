@@ -91,16 +91,26 @@
     </div>
 </nav>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu-dropdown" class="hidden max-h-0 overflow-hidden transition-all duration-300 absolute top-[80px] left-0 w-full bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700 shadow-2xl z-20">
-            <ul class="flex flex-col py-6 px-6 gap-4 text-left">
-                <li><a href="#home" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Home</a></li>
-                <li><a href="#features" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Features</a></li>
-                <li><a href="#pricing" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">Pricing</a></li>
-                <li><a href="#faq" class="mobile-link block text-heading dark:text-slate-300 hover:text-primary transition-colors text-lg font-medium">FAQ</a></li>
-                <li class="pt-4 border-t border-gray-100 dark:border-slate-800"><a href="#contact-form" class="mobile-link block text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold">Get Started</a></li>
-            </ul>
+        <!-- Mobile Menu Dropdown (Hidden by default) -->
+<div id="mobile-menu-dropdown" class="hidden md:hidden overflow-hidden transition-all duration-300 max-h-0 bg-slate-900/95 border-b border-white/10 px-6 py-4 flex flex-col gap-4">
+    <a href="#home" class="mobile-link text-white font-medium hover:text-primary transition-colors">Home</a>
+    <a href="#features" class="mobile-link text-white font-medium hover:text-primary transition-colors">Features</a>
+    <a href="#pricing" class="mobile-link text-white font-medium hover:text-primary transition-colors">Pricing</a>
+    <a href="#faq" class="mobile-link text-white font-medium hover:text-primary transition-colors">FAQ</a>
+
+    <!-- Mobile Accessibility Controls Pill -->
+    <div class="flex items-center justify-between bg-white/10 border border-white/20 rounded-xl p-2 mt-2">
+        <span class="text-xs text-white/70 font-medium">Accessibility:</span>
+        <div class="flex items-center gap-2">
+            <button id="decrease-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-xs font-bold">A-</button>
+            <button id="increase-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-sm font-bold">A+</button>
+            <button id="high-contrast" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-base">◑</button>
+            <button id="read-aloud" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full">🔊</button>
         </div>
+    </div>
+
+    <a href="#contact-form" class="mobile-link bg-primary text-center text-white py-2.5 rounded-xl font-semibold mt-2 shadow-md">Get Started</a>
+</div>
 
         <div class="relative z-10 max-w-2xl mx-auto pt-[200px] text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Empowering the <br> <span class="text-primary">Modern Builder</span></h1>
@@ -439,20 +449,20 @@
         ↑
     </button>
     <!-- আগের ফাইলগুলো -->
-    <script src="js/themeToggle.js"></script>
-    <script src="js/mobileMenu.js"></script>
-    <script src="js/pricingToggle.js"></script>
-    <script src="js/formValidation.js"></script>
-    <script src="js/scrollAnimation.js"></script>
-    <script src="js/numberCounter.js"></script>
+    <script src="js/themeToggle.js"defer></script>
+    <script src="js/mobileMenu.js"defer></script>
+    <script src="js/pricingToggle.js"defer></script>
+    <script src="js/formValidation.js"defer></script>
+    <script src="js/scrollAnimation.js"defer></script>
+    <script src="js/numberCounter.js"defer></script>
     
     <!-- নতুন অ্যাড করা ফিচারগুলো -->
-    <script src="js/textToSpeech.js"></script>
-    <script src="js/faqAccordion.js"></script>
-    <script src="js/scrollToTop.js"></script>
-    <script src="js/textResizer.js"></script>
-    <script src="js/highContrast.js"></script>
-    <script src="js/dynamicFooter.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/textToSpeech.js"defer></script>
+    <script src="js/faqAccordion.js"defer></script>
+    <script src="js/scrollToTop.js"defer></script>
+    <script src="js/textResizer.js"defer></script>
+    <script src="js/highContrast.js"defer></script>
+    <script src="js/dynamicFooter.js"defer></script>
+    <script src="js/app.js"defer></script>
 </body>
 </html>
