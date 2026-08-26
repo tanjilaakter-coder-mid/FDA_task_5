@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Description (১০০% স্কোর এর জন্য) -->
     <meta name="description" content="BuildPro is an advanced site management and safety tool designed for modern builders and construction teams.">
     <title>BuildPro - Modern Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -18,9 +17,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f97316',       
-                        'primary-hover': '#ea580c', 
-                        'primary-text': '#c2410c', 
+                        primary: '#9a3412',       // Rich Wood / Mahogany (কাঠের রঙের সাথে পারফেক্ট ম্যাচ)
+                        'primary-hover': '#7c2d12', 
                         heading: '#1e293b',       
                         body: '#475569',
                         light: '#64748B',         
@@ -60,7 +58,7 @@
 
         <!-- Right Side Actions -->
         <div class="flex items-center gap-2 md:gap-3">
-            <!-- Accessibility Controls Pill (এখন মোবাইল এবং ডেক্সটপ দুটোর জন্যই দৃশ্যমান) -->
+            <!-- Accessibility Controls Pill -->
             <div class="flex items-center bg-white/10 border border-white/20 rounded-full px-1.5 md:px-2 py-1 shadow-inner backdrop-blur-sm">
                 <button id="decrease-text" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-[10px] md:text-xs font-bold" title="Decrease Text Size">A-</button>
                 <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
@@ -85,7 +83,7 @@
             </button>
 
             <!-- Get Started Button -->
-            <a href="#contact-form" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-slate-900 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
+            <a href="#contact-form" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
             
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
@@ -98,13 +96,13 @@
         <a href="#features" class="mobile-link text-white font-medium hover:text-primary transition-colors">Features</a>
         <a href="#pricing" class="mobile-link text-white font-medium hover:text-primary transition-colors">Pricing</a>
         <a href="#faq" class="mobile-link text-white font-medium hover:text-primary transition-colors">FAQ</a>
-        <a href="#contact-form" class="mobile-link bg-primary text-center text-slate-900 py-2.5 rounded-xl font-bold mt-2 shadow-md">Get Started</a>
+        <a href="#contact-form" class="mobile-link bg-primary text-center text-white py-2.5 rounded-xl font-bold mt-2 shadow-md">Get Started</a>
     </div>
 
         <div class="relative z-10 max-w-2xl mx-auto pt-[200px] text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Empowering the <br> <span class="text-primary">Modern Builder</span></h1>
             <p class="text-lg md:text-xl opacity-90 mb-8 leading-relaxed">Advanced site management and safety tools designed specifically for the hardworking teams on the ground.</p>
-            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-slate-900 px-8 py-4 rounded-lg font-bold transition-colors duration-300">Learn more</a>
+            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-bold transition-colors duration-300">Learn more</a>
         </div>
     </header>
 
@@ -121,19 +119,19 @@
 
     <!-- Core Features Section -->
     <section id="features" class="max-w-6xl mx-auto py-20 px-4">
-        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">Core Features for <br><span class="text-primary-text dark:text-primary">Modern</span> Construction</h2>
+        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">Core Features for <br><span class="text-primary">Modern</span> Construction</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-primary dark:bg-slate-800/80 text-slate-900 dark:text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h3 class="text-xl font-bold mb-4">👷 Real-Time Safety</h3>
-                <p class="text-sm font-medium dark:font-normal dark:text-slate-300">Monitor worker safety standards and prevent site hazards instantly.</p>
+                <p class="text-sm font-medium dark:font-normal opacity-90 dark:text-slate-300">Monitor worker safety standards and prevent site hazards instantly.</p>
             </div>
-            <div class="bg-primary dark:bg-slate-800/80 text-slate-900 dark:text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h3 class="text-xl font-bold mb-4">📋 Task Management</h3>
-                <p class="text-sm font-medium dark:font-normal dark:text-slate-300">Assign daily tasks to laborers and track project progress effortlessly.</p>
+                <p class="text-sm font-medium dark:font-normal opacity-90 dark:text-slate-300">Assign daily tasks to laborers and track project progress effortlessly.</p>
             </div>
-            <div class="bg-primary dark:bg-slate-800/80 text-slate-900 dark:text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
+            <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                 <h3 class="text-xl font-bold mb-4">⚙️ Resource Optimization</h3>
-                <p class="text-sm font-medium dark:font-normal dark:text-slate-300">Efficiently manage building materials and labor hours in one dashboard.</p>
+                <p class="text-sm font-medium dark:font-normal opacity-90 dark:text-slate-300">Efficiently manage building materials and labor hours in one dashboard.</p>
             </div>
         </div>
     </section>
@@ -141,7 +139,7 @@
     <!-- Dashboard Showcase Section -->
     <section class="max-w-6xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl text-heading dark:text-white font-bold mb-6 leading-tight">Built for the site.<br><span class="text-primary-text dark:text-primary">Designed</span> for the workers.</h2>
+            <h2 class="text-3xl md:text-4xl text-heading dark:text-white font-bold mb-6 leading-tight">Built for the site.<br><span class="text-primary">Designed</span> for the workers.</h2>
             <p class="mb-8 leading-relaxed dark:text-slate-300">We believe in empowering the hardworking hands that build our world. Our platform simplifies daily workflows so your crew can focus on what they do best—building safely and efficiently.</p>
             <ul class="space-y-4 text-left inline-block md:block dark:text-slate-300">
                 <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-slate-400">●</span> Intuitive dashboard for site managers</li>
@@ -181,39 +179,39 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="max-w-6xl mx-auto py-24 px-4">
-        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-6 leading-tight">Pricing<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Choose the Right <span class="text-primary-text dark:text-primary">Plan</span> for Your Site</span></h2>
+        <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-6 leading-tight">Pricing<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Choose the Right <span class="text-primary">Plan</span> for Your Site</span></h2>
         
         <div class="flex justify-center items-center gap-4 mb-16">
             <span class="text-sm font-semibold text-heading dark:text-slate-300">Monthly</span>
             <button id="pricing-toggle" aria-label="Toggle Pricing Plan" class="relative w-14 h-8 bg-slate-300 dark:bg-slate-700 rounded-full p-1 transition-colors duration-300 focus:outline-none cursor-pointer">
                 <div id="pricing-toggle-circle" class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
             </button>
-            <span class="text-sm font-semibold text-heading dark:text-slate-300">Yearly <span class="text-xs text-primary-text dark:text-primary font-bold">(Save 20%)</span></span>
+            <span class="text-sm font-semibold text-heading dark:text-slate-300">Yearly <span class="text-xs text-primary font-bold">(Save 20%)</span></span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
                 <h3 class="text-2xl text-heading dark:text-white font-bold mb-4">Starter</h3>
-                <div class="text-xl font-bold mb-8 dark:text-white"><span id="price-1" class="text-primary-text dark:text-primary">$29</span> <span class="text-sm font-normal text-body dark:text-slate-400">/ month</span></div>
+                <div class="text-xl font-bold mb-8 dark:text-white"><span id="price-1" class="text-primary">$29</span> <span class="text-sm font-normal text-body dark:text-slate-400">/ month</span></div>
                 <ul class="text-left space-y-4 mb-10 text-sm dark:text-slate-300">
                     <li>Up to 10 active workers</li>
                     <li>Basic task management</li>
                     <li>Standard safety checklists</li>
                     <li>Email support</li>
                 </ul>
-                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary-text text-primary-text dark:border-primary dark:text-primary hover:bg-primary hover:text-slate-900 dark:hover:bg-primary dark:hover:text-white rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
             </div>
             
-            <div class="bg-primary text-slate-900 dark:text-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
+            <div class="bg-primary text-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
                 <h3 class="text-2xl font-bold mb-4">Pro (Most Popular)</h3>
                 <div class="text-xl font-bold mb-8"><span id="price-2">$79</span> <span class="text-sm font-semibold dark:font-normal opacity-90">/ month</span></div>
-                <ul class="text-left space-y-4 mb-10 text-sm font-medium dark:font-normal dark:text-slate-300">
+                <ul class="text-left space-y-4 mb-10 text-sm font-medium dark:font-normal opacity-90 dark:text-slate-300">
                     <li>Up to 50 active workers</li>
                     <li>Real-time hazard alerts</li>
                     <li>Advanced progress tracking</li>
                     <li>24/7 priority support</li>
                 </ul>
-                <a href="#contact-form" class="inline-block px-6 py-3 bg-white text-primary-text dark:bg-slate-700 dark:text-white hover:bg-slate-100 rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 bg-white text-primary dark:bg-slate-700 dark:text-white hover:bg-slate-100 rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
             </div>
             
             <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500 text-center">
@@ -225,7 +223,7 @@
                     <li>Dedicated account manager</li>
                     <li>API & software integration</li>
                 </ul>
-                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary-text text-primary-text dark:border-primary dark:text-primary hover:bg-primary hover:text-slate-900 dark:hover:bg-primary dark:hover:text-white rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
+                <a href="#contact-form" class="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-bold transition-colors duration-300">Get Started &rarr;</a>
             </div>
         </div>
     </section>
@@ -233,7 +231,7 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="bg-slate-100 dark:bg-transparent py-24 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">What Our <span class="text-primary-text dark:text-primary">Partners</span> Say<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Real feedback from the hardworking teams on the ground.</span></h2>
+            <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">What Our <span class="text-primary">Partners</span> Say<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Real feedback from the hardworking teams on the ground.</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="bg-white dark:bg-slate-800/60 p-8 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
@@ -320,7 +318,7 @@
             <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
                 <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
                     <span>How does the real-time hazard alert work?</span>
-                    <span class="faq-icon text-primary-text dark:text-primary text-xl font-bold">+</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
                 </button>
                 <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
@@ -333,7 +331,7 @@
             <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
                 <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
                     <span>Can I use BuildPro on my mobile device?</span>
-                    <span class="faq-icon text-primary-text dark:text-primary text-xl font-bold">+</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
                 </button>
                 <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
@@ -346,7 +344,7 @@
             <div class="border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800/60 overflow-hidden">
                 <button class="faq-btn w-full flex justify-between items-center p-5 text-left text-heading dark:text-white font-semibold focus:outline-none cursor-pointer">
                     <span>Is there a limit to how many workers I can add?</span>
-                    <span class="faq-icon text-primary-text dark:text-primary text-xl font-bold">+</span>
+                    <span class="faq-icon text-primary text-xl font-bold">+</span>
                 </button>
                 <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <div class="p-5 border-t border-slate-100 dark:border-slate-700 text-body dark:text-slate-300 text-sm leading-relaxed">
@@ -357,7 +355,7 @@
         </div>
     </section>
 
-    <!-- Professional Contact Us Section with Message Box -->
+    <!-- Professional Contact Us Section -->
     <section id="contact-form" class="py-20 bg-slate-100 dark:bg-slate-800/40 transition-colors duration-300">
         <div class="max-w-2xl mx-auto px-4">
             <div class="text-center mb-12">
@@ -366,7 +364,6 @@
             </div>
             
             <form id="contact-form-element" class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-card space-y-6">
-                <!-- General Error/Success Feedback Box -->
                 <div id="form-feedback" class="p-4 rounded-lg text-sm hidden font-medium text-center"></div>
 
                 <!-- 1. Name Field -->
@@ -387,7 +384,7 @@
                     <input type="text" id="contact-subject" placeholder="What is this about?" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors">
                 </div>
 
-                <!-- 4. Message Box (Textarea) -->
+                <!-- 4. Message Box -->
                 <div>
                     <label class="block text-sm font-semibold text-heading dark:text-slate-300 mb-2">Message</label>
                     <textarea id="contact-message" rows="4" placeholder="Write your message here (at least 10 characters)..." class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-heading dark:text-white focus:outline-none focus:border-primary transition-colors"></textarea>
@@ -400,7 +397,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-slate-900 py-3 rounded-lg font-bold transition-colors cursor-pointer">Send Message</button>
+                <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white py-3 rounded-lg font-bold transition-colors cursor-pointer">Send Message</button>
             </form>
         </div>
     </section>
@@ -410,7 +407,7 @@
         <div class="absolute inset-0 bg-black/70 z-0"></div>
         <div class="relative z-10 max-w-2xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Build Smarter & Safer?</h2>
-            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-slate-900 px-8 py-4 rounded-lg font-bold transition-colors duration-300">Start Your Free Trial</a>
+            <a href="#contact-form" class="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-bold transition-colors duration-300">Start Your Free Trial</a>
         </div>
     </section>
 
@@ -431,7 +428,7 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" aria-label="Scroll to Top" class="fixed bottom-8 right-8 z-50 bg-primary hover:bg-primary-hover text-slate-900 w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 flex items-center justify-center cursor-pointer text-2xl font-bold" title="Scroll to Top">
+    <button id="scroll-to-top" aria-label="Scroll to Top" class="fixed bottom-8 right-8 z-50 bg-primary hover:bg-primary-hover text-white w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 flex items-center justify-center cursor-pointer text-2xl font-bold" title="Scroll to Top">
         ↑
     </button>
     
