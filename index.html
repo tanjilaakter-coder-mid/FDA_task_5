@@ -16,11 +16,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F97316',
-                        'primary-hover': '#EA580C',
+                        primary: '#ea580c',       // Contrast Fixed
+                        'primary-hover': '#c2410c', // Contrast Fixed
                         heading: '#475569',
                         body: '#64748B',
-                        light: '#94A3B8',
+                        light: '#64748B',         // Contrast Fixed
                         'dark-bg': '#0B1120',
                         'dark-card': '#1E293B'
                     },
@@ -42,75 +42,73 @@
     <header id="home" class="relative w-full min-h-[600px] h-screen bg-[url('main-images/hero-bg.jpg')] bg-cover bg-center text-white">
         <div class="absolute inset-0 bg-black/60 z-0"></div>
         
-        <!-- Glassmorphism Navbar -->
-   <!-- Glassmorphism Navbar -->
-<!-- Glassmorphism Navbar (Fixed & Clean) -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/60 backdrop-blur-md border-b border-white/10 py-4 px-6 md:px-[6%] flex justify-between items-center transition-all duration-300">
-    <!-- Logo -->
-    <div class="text-2xl font-bold text-white tracking-wide">BuildPro</div>
+    <!-- Glassmorphism Navbar (Fixed & Clean) -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/60 backdrop-blur-md border-b border-white/10 py-4 px-6 md:px-[6%] flex justify-between items-center transition-all duration-300">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-white tracking-wide">BuildPro</div>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-8 text-white/90 font-medium text-sm">
-        <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
-        <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
-        <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
-        <li><a href="#faq" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
-    </ul>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 text-white/90 font-medium text-sm">
+            <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
+            <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
+            <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
+        </ul>
 
-    <!-- Right Side Actions -->
-    <div class="flex items-center gap-3">
-        <!-- Accessibility Controls Pill -->
-        <div class="hidden lg:flex items-center bg-white/10 border border-white/20 rounded-full px-2 py-1 shadow-inner backdrop-blur-sm">
-            <button id="decrease-text" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-xs font-bold" title="Decrease Text Size">A-</button>
-            <div class="w-px h-3.5 bg-white/30 mx-1"></div>
-            <button id="increase-text" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-sm font-bold" title="Increase Text Size">A+</button>
-            <div class="w-px h-3.5 bg-white/30 mx-1"></div>
-            <button id="high-contrast-btn" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-base" title="High Contrast Mode">◑</button>
-            <div class="w-px h-3.5 bg-white/30 mx-1"></div>
-            <button id="read-aloud-btn" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer" title="Read Page Aloud">
-                <svg id="speech-icon-on" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
-                <svg id="speech-icon-off" class="w-4 h-4 hidden text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+        <!-- Right Side Actions -->
+        <div class="flex items-center gap-3">
+            <!-- Accessibility Controls Pill -->
+            <div class="hidden lg:flex items-center bg-white/10 border border-white/20 rounded-full px-2 py-1 shadow-inner backdrop-blur-sm">
+                <button id="decrease-text" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-xs font-bold" title="Decrease Text Size">A-</button>
+                <div class="w-px h-3.5 bg-white/30 mx-1"></div>
+                <button id="increase-text" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-sm font-bold" title="Increase Text Size">A+</button>
+                <div class="w-px h-3.5 bg-white/30 mx-1"></div>
+                <button id="high-contrast-btn" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-base" title="High Contrast Mode">◑</button>
+                <div class="w-px h-3.5 bg-white/30 mx-1"></div>
+                <button id="read-aloud-btn" class="w-7 h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer" title="Read Page Aloud">
+                    <svg id="speech-icon-on" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                    <svg id="speech-icon-off" class="w-4 h-4 hidden text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+                </button>
+            </div>
+
+            <!-- Theme Toggle Button (Aria Label Added) -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer text-white shadow-sm">
+                <svg id="theme-icon-light" class="w-4 h-4 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                </svg>
+                <svg id="theme-icon-dark" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
             </button>
+
+            <!-- Get Started Button -->
+            <a href="#contact-form" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
         </div>
-
-        <!-- Theme Toggle Button -->
-        <button id="theme-toggle" class="p-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer text-white shadow-sm">
-            <svg id="theme-icon-light" class="w-4 h-4 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
-            </svg>
-            <svg id="theme-icon-dark" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-        </button>
-
-        <!-- Get Started Button -->
-        <a href="#contact-form" class="hidden md:inline-block bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
-        
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
-    </div>
-</nav>
+    </nav>
 
         <!-- Mobile Menu Dropdown (Hidden by default) -->
-<div id="mobile-menu-dropdown" class="hidden md:hidden overflow-hidden transition-all duration-300 max-h-0 bg-slate-900/95 border-b border-white/10 px-6 py-4 flex flex-col gap-4">
-    <a href="#home" class="mobile-link text-white font-medium hover:text-primary transition-colors">Home</a>
-    <a href="#features" class="mobile-link text-white font-medium hover:text-primary transition-colors">Features</a>
-    <a href="#pricing" class="mobile-link text-white font-medium hover:text-primary transition-colors">Pricing</a>
-    <a href="#faq" class="mobile-link text-white font-medium hover:text-primary transition-colors">FAQ</a>
+    <div id="mobile-menu-dropdown" class="hidden md:hidden overflow-hidden transition-all duration-300 max-h-0 bg-slate-900/95 border-b border-white/10 px-6 py-4 flex flex-col gap-4">
+        <a href="#home" class="mobile-link text-white font-medium hover:text-primary transition-colors">Home</a>
+        <a href="#features" class="mobile-link text-white font-medium hover:text-primary transition-colors">Features</a>
+        <a href="#pricing" class="mobile-link text-white font-medium hover:text-primary transition-colors">Pricing</a>
+        <a href="#faq" class="mobile-link text-white font-medium hover:text-primary transition-colors">FAQ</a>
 
-    <!-- Mobile Accessibility Controls Pill -->
-    <div class="flex items-center justify-between bg-white/10 border border-white/20 rounded-xl p-2 mt-2">
-        <span class="text-xs text-white/70 font-medium">Accessibility:</span>
-        <div class="flex items-center gap-2">
-            <button id="decrease-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-xs font-bold">A-</button>
-            <button id="increase-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-sm font-bold">A+</button>
-            <button id="high-contrast" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-base">◑</button>
-            <button id="read-aloud" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full">🔊</button>
+        <!-- Mobile Accessibility Controls Pill -->
+        <div class="flex items-center justify-between bg-white/10 border border-white/20 rounded-xl p-2 mt-2">
+            <span class="text-xs text-white/70 font-medium">Accessibility:</span>
+            <div class="flex items-center gap-2">
+                <button id="decrease-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-xs font-bold">A-</button>
+                <button id="increase-text" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-sm font-bold">A+</button>
+                <button id="high-contrast" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full text-base">◑</button>
+                <button id="read-aloud" class="w-8 h-8 flex items-center justify-center text-white bg-white/10 rounded-full">🔊</button>
+            </div>
         </div>
-    </div>
 
-    <a href="#contact-form" class="mobile-link bg-primary text-center text-white py-2.5 rounded-xl font-semibold mt-2 shadow-md">Get Started</a>
-</div>
+        <a href="#contact-form" class="mobile-link bg-primary text-center text-white py-2.5 rounded-xl font-semibold mt-2 shadow-md">Get Started</a>
+    </div>
 
         <div class="relative z-10 max-w-2xl mx-auto pt-[200px] text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Empowering the <br> <span class="text-primary">Modern Builder</span></h1>
@@ -121,7 +119,8 @@
 
     <!-- Trusted By Section -->
     <section class="max-w-6xl mx-auto py-20 px-4">
-        <h4 class="text-center text-light text-sm tracking-widest uppercase mb-10">Trusted by top construction firms</h4>
+        <!-- Heading Fixed: h4 to h2 & color adjusted -->
+        <h2 class="text-center text-slate-500 text-sm tracking-widest uppercase mb-10 font-bold">Trusted by top construction firms</h2>
         <div class="flex justify-center md:justify-between items-center flex-wrap gap-8">
             <img src="company-logos/trusted-1.png" alt="Company 1" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
             <img src="company-logos/trusted-2.png" alt="Company 2" class="h-12 md:h-16 grayscale opacity-50 dark:invert dark:opacity-80 hover:grayscale-0 hover:opacity-100 hover:-translate-y-2 transition-all duration-500">
@@ -135,15 +134,18 @@
         <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-16 leading-tight">Core Features for <br><span class="text-primary">Modern</span> Construction</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                <h4 class="text-xl font-bold mb-4">👷 Real-Time Safety</h4>
+                <!-- Heading Fixed: h4 to h3 -->
+                <h3 class="text-xl font-bold mb-4">👷 Real-Time Safety</h3>
                 <p class="text-sm opacity-90 dark:text-slate-300">Monitor worker safety standards and prevent site hazards instantly.</p>
             </div>
             <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                <h4 class="text-xl font-bold mb-4">📋 Task Management</h4>
+                <!-- Heading Fixed: h4 to h3 -->
+                <h3 class="text-xl font-bold mb-4">📋 Task Management</h3>
                 <p class="text-sm opacity-90 dark:text-slate-300">Assign daily tasks to laborers and track project progress effortlessly.</p>
             </div>
             <div class="bg-primary dark:bg-slate-800/80 text-white p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
-                <h4 class="text-xl font-bold mb-4">⚙️ Resource Optimization</h4>
+                <!-- Heading Fixed: h4 to h3 -->
+                <h3 class="text-xl font-bold mb-4">⚙️ Resource Optimization</h3>
                 <p class="text-sm opacity-90 dark:text-slate-300">Efficiently manage building materials and labor hours in one dashboard.</p>
             </div>
         </div>
@@ -155,10 +157,10 @@
             <h2 class="text-3xl md:text-4xl text-heading dark:text-white font-bold mb-6 leading-tight">Built for the site.<br><span class="text-primary">Designed</span> for the workers.</h2>
             <p class="mb-8 leading-relaxed dark:text-slate-300">We believe in empowering the hardworking hands that build our world. Our platform simplifies daily workflows so your crew can focus on what they do best—building safely and efficiently.</p>
             <ul class="space-y-4 text-left inline-block md:block dark:text-slate-300">
-                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Intuitive dashboard for site managers</li>
-                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Real-time hazard and safety alerts</li>
-                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Easy progress tracking from the field</li>
-                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-light">●</span> Mobile-friendly for everyday laborers</li>
+                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-slate-400">●</span> Intuitive dashboard for site managers</li>
+                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-slate-400">●</span> Real-time hazard and safety alerts</li>
+                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-slate-400">●</span> Easy progress tracking from the field</li>
+                <li class="relative pl-6 font-semibold"><span class="absolute left-0 text-slate-400">●</span> Mobile-friendly for everyday laborers</li>
             </ul>
         </div>
         <div class="flex-1">
@@ -173,17 +175,20 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <img src="work-icons/icon-team.png" alt="Connect Team" class="h-10 mb-6 grayscale opacity-60 dark:invert">
-                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Connect Your Team</h4>
+                    <!-- Heading Fixed: h4 to h3 -->
+                    <h3 class="text-xl text-heading dark:text-white font-bold mb-4">Connect Your Team</h3>
                     <p class="text-sm leading-relaxed dark:text-slate-300">Bring managers and site workers together instantly.</p>
                 </div>
                 <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <img src="work-icons/icon-task.png" alt="Assign Tasks" class="h-10 mb-6 grayscale opacity-60 dark:invert">
-                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Assign Tasks & Track</h4>
+                    <!-- Heading Fixed: h4 to h3 -->
+                    <h3 class="text-xl text-heading dark:text-white font-bold mb-4">Assign Tasks & Track</h3>
                     <p class="text-sm leading-relaxed dark:text-slate-300">Easily assign daily jobs and track progress.</p>
                 </div>
                 <div class="bg-white dark:bg-slate-800/60 p-10 rounded-2xl shadow-card hover:-translate-y-2 transition-all duration-500">
                     <img src="work-icons/icon-safety.png" alt="Safety" class="h-10 mb-6 grayscale opacity-60 dark:invert">
-                    <h4 class="text-xl text-heading dark:text-white font-bold mb-4">Prevent Hazards</h4>
+                    <!-- Heading Fixed: h4 to h3 -->
+                    <h3 class="text-xl text-heading dark:text-white font-bold mb-4">Prevent Hazards</h3>
                     <p class="text-sm leading-relaxed dark:text-slate-300">Prevent site hazards and finish projects safely.</p>
                 </div>
             </div>
@@ -194,10 +199,10 @@
     <section id="pricing" class="max-w-6xl mx-auto py-24 px-4">
         <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-6 leading-tight">Pricing<br><span class="text-lg font-normal text-body dark:text-slate-400 mt-2 block">Choose the Right <span class="text-primary">Plan</span> for Your Site</span></h2>
         
-        <!-- Pricing Toggle Switch -->
+        <!-- Pricing Toggle Switch (Aria Label Added) -->
         <div class="flex justify-center items-center gap-4 mb-16">
             <span class="text-sm font-semibold text-heading dark:text-slate-300">Monthly</span>
-            <button id="pricing-toggle" class="relative w-14 h-8 bg-slate-300 dark:bg-slate-700 rounded-full p-1 transition-colors duration-300 focus:outline-none cursor-pointer">
+            <button id="pricing-toggle" aria-label="Toggle Pricing Plan" class="relative w-14 h-8 bg-slate-300 dark:bg-slate-700 rounded-full p-1 transition-colors duration-300 focus:outline-none cursor-pointer">
                 <div id="pricing-toggle-circle" class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
             </button>
             <span class="text-sm font-semibold text-heading dark:text-slate-300">Yearly <span class="text-xs text-primary font-bold">(Save 20%)</span></span>
@@ -252,8 +257,9 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-1.jpg" alt="Emily" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Emily Rodriguez</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Safety Coordinator</span>
+                            <!-- Headings & Colors Fixed -->
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">Emily Rodriguez</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Safety Coordinator</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -264,8 +270,8 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-2.jpg" alt="James" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">James Carter</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Chief Contractor</span>
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">James Carter</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Chief Contractor</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -276,8 +282,8 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-3.jpg" alt="Robert" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Robert Chen</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Operations Director</span>
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">Robert Chen</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Operations Director</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -288,8 +294,8 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-4.jpg" alt="Sarah" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Sarah Jenkins</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Site Manager</span>
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">Sarah Jenkins</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Site Manager</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -300,8 +306,8 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-5.jpg" alt="Michael" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">Michael O'Connor</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Foreman</span>
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">Michael O'Connor</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Foreman</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -312,8 +318,8 @@
                     <div class="flex items-center gap-4 mb-4">
                         <img src="avatars/avatar-6.jpg" alt="David" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h4 class="text-heading dark:text-white font-semibold text-sm">David Kim</h4>
-                            <span class="text-light text-xs dark:text-slate-400">Structural Engineer</span>
+                            <h3 class="text-heading dark:text-white font-semibold text-sm">David Kim</h3>
+                            <span class="text-slate-500 text-xs dark:text-slate-400">Structural Engineer</span>
                         </div>
                     </div>
                     <div class="text-sm mb-4">⭐⭐⭐⭐⭐</div>
@@ -322,7 +328,7 @@
             </div>
     </section>
 
-    <!-- Phase 4: FAQ Accordion Section (Newly Added) -->
+    <!-- Phase 4: FAQ Accordion Section -->
     <section id="faq" class="max-w-4xl mx-auto py-24 px-4">
         <h2 class="text-3xl md:text-4xl text-heading dark:text-white text-center font-bold mb-4">Frequently Asked Questions</h2>
         <p class="text-center text-body dark:text-slate-400 mb-12">Everything you need to know about BuildPro.</p>
@@ -431,7 +437,7 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <h3 class="text-2xl font-bold mb-2">BuildPro</h3>
-                <p class="text-light text-sm">&copy; 2026 BuildPro. All rights reserved. | <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors">Terms</a></p>
+                <p class="text-slate-500 text-sm">&copy; 2026 BuildPro. All rights reserved. | <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors">Terms</a></p>
             </div>
             <div class="flex gap-4">
                 <a href="#" class="hover:scale-110 transition-transform"><img src="social-icons/icon-facebook.png" alt="Facebook" class="w-6 h-6"></a>
@@ -449,20 +455,20 @@
         ↑
     </button>
     <!-- আগের ফাইলগুলো -->
-    <script src="js/themeToggle.js"defer></script>
-    <script src="js/mobileMenu.js"defer></script>
-    <script src="js/pricingToggle.js"defer></script>
-    <script src="js/formValidation.js"defer></script>
-    <script src="js/scrollAnimation.js"defer></script>
-    <script src="js/numberCounter.js"defer></script>
+    <script src="js/themeToggle.js" defer></script>
+    <script src="js/mobileMenu.js" defer></script>
+    <script src="js/pricingToggle.js" defer></script>
+    <script src="js/formValidation.js" defer></script>
+    <script src="js/scrollAnimation.js" defer></script>
+    <script src="js/numberCounter.js" defer></script>
     
     <!-- নতুন অ্যাড করা ফিচারগুলো -->
-    <script src="js/textToSpeech.js"defer></script>
-    <script src="js/faqAccordion.js"defer></script>
-    <script src="js/scrollToTop.js"defer></script>
-    <script src="js/textResizer.js"defer></script>
-    <script src="js/highContrast.js"defer></script>
-    <script src="js/dynamicFooter.js"defer></script>
-    <script src="js/app.js"defer></script>
+    <script src="js/textToSpeech.js" defer></script>
+    <script src="js/faqAccordion.js" defer></script>
+    <script src="js/scrollToTop.js" defer></script>
+    <script src="js/textResizer.js" defer></script>
+    <script src="js/highContrast.js" defer></script>
+    <script src="js/dynamicFooter.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
