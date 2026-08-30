@@ -3,7 +3,7 @@
 🔗 **Live Website:** [https://fda-task-5-e95f.vercel.app/](https://fda-task-5-e95f.vercel.app/)
 
 ## 💻 Desktop View
-![BuildPro Desktop View](desktop_view.jpg)
+![BuildPro Desktop View](Desktop_View.PNG)
 
 ---
 
@@ -31,12 +31,12 @@ BuildPro is a highly optimized, fully responsive, and accessible landing page de
 
 - **HTML5:** Semantic and SEO-friendly structure.
 - **Tailwind CSS:** Utility-first framework for rapid, responsive styling.
-- **Vanilla JavaScript:** For DOM manipulation, interactivity, and custom accessibility logic.
+- **JavaScript:** For DOM manipulation, interactivity, and custom accessibility logic.
 
 ---
 
 ## 📱 Mobile View
-![BuildPro Mobile View](mobile_view.jpg)
+![BuildPro Mobile View](Mobile_View.PNG)
 
 ---
 *Designed & Developed for FDA Week 4 Internship Task.*
