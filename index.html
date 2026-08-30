@@ -11,6 +11,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="main-images/favicon.png">
 
+    <!-- Aggressive Preload for maximum Lighthouse Score (LCP Boost) -->
+    <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
+
     <!-- OpenGraph (OG) Tags for Social Media -->
     <meta property="og:title" content="BuildPro - Modern Builder" />
     <meta property="og:description" content="Advanced site management and safety tools designed specifically for the hardworking teams on the ground." />
@@ -18,6 +21,7 @@
     <meta property="og:url" content="https://fda-task-5-e95f.vercel.app/" />
     <meta property="og:type" content="website" />
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN Link -->
@@ -55,64 +59,65 @@
 
     <!-- Hero Section -->
     <header id="home" class="relative w-full min-h-[600px] h-screen bg-[url('main-images/hero-bg.jpg')] bg-cover bg-center text-white">
+        <!-- 60% Black Overlay -->
         <div class="absolute inset-0 bg-black/60 z-0"></div>
         
-    <!-- Glassmorphism Navbar (Fixed Bug: Used Flex-Col to safely push the menu down) -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10 flex flex-col transition-all duration-300">
-        <!-- Top Navbar Row -->
-        <div class="flex justify-between items-center w-full py-4 px-4 md:px-[6%]">
-            <!-- Logo -->
-            <div class="text-xl md:text-2xl font-bold text-white tracking-wide">BuildPro</div>
+        <!-- Glassmorphism Navbar -->
+        <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+            <!-- Top Navbar Row -->
+            <div class="flex justify-between items-center py-4 px-4 md:px-[6%]">
+                <!-- Logo -->
+                <div class="text-xl md:text-2xl font-bold text-white tracking-wide">BuildPro</div>
 
-            <!-- Desktop Menu -->
-            <ul class="hidden lg:flex gap-8 text-white/90 font-medium text-sm">
-                <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
-                <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
-                <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
-                <li><a href="#faq" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
-            </ul>
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex gap-8 text-white/90 font-medium text-sm">
+                    <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="#features" class="hover:text-primary transition-colors duration-300">Features</a></li>
+                    <li><a href="#pricing" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
+                    <li><a href="#faq" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
+                </ul>
 
-            <!-- Right Side Actions -->
-            <div class="flex items-center gap-2 md:gap-3">
-                <!-- Accessibility Controls Pill -->
-                <div class="flex items-center bg-white/10 border border-white/20 rounded-full px-1.5 md:px-2 py-1 shadow-inner backdrop-blur-sm">
-                    <button id="decrease-text" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-[10px] md:text-xs font-bold" title="Decrease Text Size">A-</button>
-                    <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
-                    <button id="increase-text" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-xs md:text-sm font-bold" title="Increase Text Size">A+</button>
-                    <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
-                    <button id="high-contrast-btn" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-sm md:text-base" title="High Contrast Mode">◑</button>
-                    <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
-                    <button id="read-aloud-btn" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer" title="Read Page Aloud">
-                        <svg id="speech-icon-on" class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
-                        <svg id="speech-icon-off" class="w-3.5 h-3.5 md:w-4 md:h-4 hidden text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+                <!-- Right Side Actions -->
+                <div class="flex items-center gap-2 md:gap-3">
+                    <!-- Accessibility Controls Pill -->
+                    <div class="flex items-center bg-white/10 border border-white/20 rounded-full px-1.5 md:px-2 py-1 shadow-inner backdrop-blur-sm">
+                        <button id="decrease-text" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-[10px] md:text-xs font-bold" title="Decrease Text Size">A-</button>
+                        <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
+                        <button id="increase-text" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-xs md:text-sm font-bold" title="Increase Text Size">A+</button>
+                        <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
+                        <button id="high-contrast-btn" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer text-sm md:text-base" title="High Contrast Mode">◑</button>
+                        <div class="w-px h-3.5 bg-white/30 mx-0.5 md:mx-1"></div>
+                        <button id="read-aloud-btn" class="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center text-white/90 rounded-full hover:bg-white/20 transition-colors cursor-pointer" title="Read Page Aloud">
+                            <svg id="speech-icon-on" class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                            <svg id="speech-icon-off" class="w-3.5 h-3.5 md:w-4 md:h-4 hidden text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer text-white shadow-sm">
+                        <svg id="theme-icon-light" class="w-4 h-4 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
+                        <svg id="theme-icon-dark" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     </button>
+
+                    <!-- Get Started Button -->
+                    <a href="#contact-form" class="hidden md:inline-block bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary-hover text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
                 </div>
-
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full focus:outline-none transition-all duration-300 flex items-center justify-center cursor-pointer text-white shadow-sm">
-                    <svg id="theme-icon-light" class="w-4 h-4 text-yellow-400 hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-3.22a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
-                    <svg id="theme-icon-dark" class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                </button>
-
-                <!-- Get Started Button -->
-                <a href="#contact-form" class="hidden md:inline-block bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary-hover text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-primary/20">Get Started</a>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
             </div>
-        </div>
 
-        <!-- Mobile Menu Dropdown (Perfectly sits below navbar without clipping) -->
-        <div id="mobile-menu-dropdown" class="hidden lg:hidden w-full bg-slate-900 overflow-hidden transition-all duration-300 max-h-0 border-t border-white/10 shadow-2xl">
-            <div class="px-6 py-6 flex flex-col gap-5">
-                <a href="#home" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Home</a>
-                <a href="#features" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Features</a>
-                <a href="#pricing" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Pricing</a>
-                <a href="#faq" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">FAQ</a>
-                <a href="#contact-form" class="mobile-link bg-gradient-to-r from-primary to-secondary text-center text-white py-3 rounded-xl font-bold mt-2 shadow-md hover:shadow-lg transition-all">Get Started</a>
+            <!-- Mobile Menu Dropdown (Perfectly Absolute positioned below navbar) -->
+            <div id="mobile-menu-dropdown" class="hidden lg:hidden absolute top-full left-0 w-full bg-slate-900 overflow-hidden transition-all duration-300 max-h-0 border-t border-white/10 shadow-2xl">
+                <div class="px-6 py-6 flex flex-col gap-5">
+                    <a href="#home" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="#features" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Features</a>
+                    <a href="#pricing" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Pricing</a>
+                    <a href="#faq" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">FAQ</a>
+                    <a href="#contact-form" class="mobile-link bg-gradient-to-r from-primary to-secondary text-center text-white py-3 rounded-xl font-bold mt-2 shadow-md hover:shadow-lg transition-all">Get Started</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
         <div class="relative z-10 max-w-2xl mx-auto pt-[200px] text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Empowering the <br> <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Modern Builder</span></h1>

@@ -3,8 +3,7 @@
 🔗 **Live Website:** [https://fda-task-5-e95f.vercel.app/](https://fda-task-5-e95f.vercel.app/)
 
 ## 💻 Desktop View
-*(Replace the link below with your actual desktop screenshot path)*
-![BuildPro Desktop View](main-images/dashboard-mockup.png)
+![BuildPro Desktop View](desktop_view.png)
 
 ---
 
@@ -37,8 +36,7 @@ BuildPro is a highly optimized, fully responsive, and accessible landing page de
 ---
 
 ## 📱 Mobile View
-*(Replace the link below with your actual mobile screenshot path)*
-![BuildPro Mobile View](main-images/dashboard-mockup.png)
+![BuildPro Mobile View](mobile_view.png)
 
 ---
 *Designed & Developed for FDA Week 4 Internship Task.*
