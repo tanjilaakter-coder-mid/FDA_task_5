@@ -11,7 +11,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="main-images/favicon.png">
 
-    <!-- High Priority Background Image Fix for 90+ Lighthouse Score -->
+   <!-- High Priority Image Preload for 90+ Performance Score -->
+    <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
+    
     <style>
         #home {
             background-image: url('main-images/hero-bg.jpg');
