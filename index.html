@@ -11,7 +11,12 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="main-images/favicon.png">
 
-   <!-- High Priority Image Preload for 90+ Performance Score -->
+   <!-- Preconnect to improve Render Blocking for External Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- High Priority Hero Image Preload -->
     <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
     
     <style>
